@@ -1,7 +1,29 @@
 aid: liv
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/liv.png
 name: LIV
-description: LIV is a company surfaced as a portfolio company of seedcamp, techstars and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  LIV is an XR video capture and live-streaming platform whose flagship product,
+  the LIV Camera Kit (LCK), is a game-engine SDK for Unity and Unreal Engine. It
+  lets extended-reality apps on Meta Quest and PCVR embed user-spawnable in-game
+  cameras for recording video, capturing screenshots, and live streaming to
+  YouTube, Twitch, and custom RTMP endpoints - with no external capture hardware
+  or software. An official Meta Quest partner, LIV ships first-party Unity and
+  Unreal SDKs, a Developer Dashboard for SDK downloads and Tracking IDs, a LIV
+  Hub device-login flow for streaming and subscriptions, and a desktop LIV App
+  URI/command API for mixed-reality capture. The SDK is free for developers and
+  is used by apps serving millions of monthly active users.
 url: https://raw.githubusercontent.com/api-evangelist/liv/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +34,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- XR
+- Virtual Reality
+- Mixed Reality
+- Video Capture
+- Live Streaming
+- Game Engine SDK
+- Unity
+- Unreal Engine
+- Meta Quest
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,4 +54,49 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://liv.tv
+  url: https://liv.tv
+- type: Documentation
+  url: https://docs.liv.tv
+- type: DeveloperPortal
+  url: https://dashboard.liv.tv
+- type: APIReference
+  url: https://docs.liv.tv/api-reference/unity/introduction
+- type: GettingStarted
+  url: https://docs.liv.tv/unity/quickstart
+- type: Blog
+  url: https://liv.tv/blog
+- type: Support
+  url: https://discord.com/invite/liv
+- type: GitHubOrganization
+  url: https://github.com/LIV
+- type: SignUp
+  url: https://dashboard.liv.tv/dev/login
+- type: TermsOfService
+  url: https://liv.tv/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://liv.tv/legal/privacy-policy
+- type: StatusPage
+  url: https://status.liv.tv
+- type: LLMsTxt
+  url: llms/liv-llms.txt
+- type: WellKnown
+  url: well-known/liv-well-known.yml
+- type: Packages
+  url: packages/liv-packages.yml
+- type: SDKs
+  url: packages/liv-packages.yml
+- type: Authentication
+  url: authentication/liv-authentication.yml
+- type: ErrorCatalog
+  url: errors/liv-error-codes.yml
+- type: ChangeLog
+  url: changelog/liv-changelog.yml
+- type: Lifecycle
+  url: lifecycle/liv-lifecycle.yml
+- type: DomainSecurity
+  url: security/liv-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1
