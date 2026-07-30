@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.liv.tv/unity/changelog.md,
+  https://docs.liv.tv/unreal/changelogs.md
+notes: >-
+  LIV Camera Kit (LCK) ships per-engine SDKs with independent version lines and
+  dated changelogs. Recent window captured; the live changelog pages are the source
+  of truth.
+scheme: semver (per-engine)
+tracks:
+- track: unity
+  name: LIV Camera Kit (LCK) Unity SDK
+  current: v1.4.5
+  changelog: https://docs.liv.tv/unity/changelog
+  entries:
+  - version: v1.4.5
+    date: '2026-03-05'
+    highlights:
+    - Fixed setup wizard compatibility with Unity 2021.3
+  - version: v1.4.4
+    date: '2026-02-23'
+    additions:
+    - Third-party audio setup tools
+    - Setup Wizard, Validation, and Updates pages in Settings
+    highlights:
+    - Streaming stability improvements and storage monitoring changes
+  - version: v1.4.3
+    date: '2025-12-18'
+    breaking: false
+    highlights:
+    - Removed streaming user subscription requirement
+    - Configurable mic-permission timing; improved error telemetry and Tracking ID validation
+- track: unreal
+  name: LIV Camera Kit (LCK) Unreal Engine SDK
+  current: v1.0.0
+  changelog: https://docs.liv.tv/unreal/changelogs
+  entries:
+  - version: v1.0.0
+    date: '2026-03-17'
+    highlights:
+    - First public release of the LCK SDK for Unreal Engine
+    - Live streaming to YouTube, Twitch, and custom RTMP via new LCKStreaming plugin
+    - Getting Started wizard; per-source sample-rate audio handling; Quest 2 optimizations

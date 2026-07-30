@@ -1,0 +1,44 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/ on LIV hosts
+notes: >-
+  LIV is a game-engine SDK provider (LIV Camera Kit) with no public REST/HTTP API
+  surface, so no /.well-known/ discovery documents are published. All probes returned
+  404. Absence recorded as valid data.
+hosts:
+- host: https://liv.tv
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://docs.liv.tv
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://dashboard.liv.tv
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

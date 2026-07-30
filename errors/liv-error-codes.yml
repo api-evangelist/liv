@@ -1,0 +1,69 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.liv.tv/api-reference/unity/enums/LckError.md,
+  https://docs.liv.tv/api-reference/unity/enums/CoreError.md,
+  https://docs.liv.tv/api-reference/unreal/errors.md
+format: sdk-error-codes
+notes: >-
+  LIV Camera Kit is an SDK, so errors are returned as enum/result codes, not
+  RFC 9457 problem+json. Unity returns LckError (runtime capture) and CoreError
+  (setup/auth) via an LckResult(.IsOk/.Error/.Message). Unreal has no ELCKError
+  enum; errors arrive on the FOnRecordingError delegate on ULCKService as an
+  int32 ErrorCode + FString ErrorMessage.
+envelopes:
+- platform: unity
+  type: LckResult / Result<T>
+  fields: [IsOk, Error, Message]
+- platform: unreal
+  type: FOnRecordingError delegate on ULCKService
+  fields: [ErrorCode, ErrorMessage]
+error_families:
+- name: LckError
+  platform: unity
+  scope: runtime capture/recording/streaming operations
+  examples: [NotEnoughStorageSpace, MicrophonePermissionDenied]
+- name: CoreError
+  platform: unity
+  scope: SDK initialization and authentication (setup-time)
+  examples: [MissingTrackingId, InvalidArguments, UserNotLoggedIn]
+unreal_error_codes:
+- code: 0
+  name: None
+  meaning: Operation succeeded
+- code: 1
+  name: InvalidTrackingId
+  meaning: Tracking ID missing or invalid format
+  action: Add valid UUID v4 from dashboard
+- code: 2
+  name: RecordingAlreadyStarted
+  meaning: Start called while already recording
+  action: Check IsRecording() first
+- code: 3
+  name: NotCurrentlyRecording
+  meaning: Stop called when not recording
+  action: Check recording state
+- code: 4
+  name: EncoderNotAvailable
+  meaning: Platform encoder failed to init
+  action: Check platform requirements, GPU support
+- code: 5
+  name: InsufficientStorage
+  meaning: Not enough disk space
+  action: Free up space, reduce quality
+- code: 6
+  name: PermissionDenied
+  meaning: Mic/storage permission denied (Android)
+  action: Request permissions, guide to settings
+- code: 7
+  name: EncodingError
+  meaning: Video/audio encoding failure
+  action: Check logs, reduce quality
+- code: 8
+  name: TextureError
+  meaning: Render texture capture failed
+  action: Verify SceneCaptureComponent setup
+docs:
+  unity_lck_error: https://docs.liv.tv/api-reference/unity/enums/LckError.md
+  unity_core_error: https://docs.liv.tv/api-reference/unity/enums/CoreError.md
+  unreal_errors: https://docs.liv.tv/api-reference/unreal/errors.md

@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://docs.liv.tv/unity/changelog.md,
+  https://docs.liv.tv/unity/upgrade-guide.md,
+  https://status.liv.tv
+notes: >-
+  LIV Camera Kit versions its per-engine SDKs with semver and publishes upgrade
+  guides between major versions (e.g. legacy MRC SDK v1.5 -> v2.0 for Unity). No
+  formal HTTP API deprecation policy (Sunset/Deprecation headers) applies since
+  there is no REST API surface; lifecycle is package-version based.
+versioning:
+  scheme: semver-per-engine
+  current:
+    unity: v1.4.5
+    unreal: v1.0.0
+  upgrade_guides:
+  - https://docs.liv.tv/unity/upgrade-guide
+  - https://docs.liv.tv/mixed-reality-capture/unity/upgrade
+deprecation:
+  policy: package-version deprecation via changelog + upgrade guides
+  http_sunset_headers: false
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.liv.tv
+status_provider: UptimeRobot

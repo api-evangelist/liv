@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.liv.tv/ (SDK installation pages) + https://dashboard.liv.tv (Developer Dashboard download)
+notes: >-
+  LIV distributes its first-party client SDKs (LIV Camera Kit / LCK) as game-engine
+  packages downloaded from the LIV Developer Dashboard, not via public language
+  registries (npm/PyPI/etc. probes returned no first-party LIV package). Both SDKs
+  are official, first-party client libraries.
+packages:
+- language: csharp
+  ecosystem: unity
+  registry: vendor-dashboard
+  name: LIV Camera Kit (LCK) for Unity
+  url: https://docs.liv.tv/unity/installation
+  download: https://dashboard.liv.tv/dev/login
+  supports: Unity 2020.3+ (2022.3+ recommended)
+  official: true
+- language: cpp
+  ecosystem: unreal
+  registry: vendor-dashboard
+  name: LIV Camera Kit (LCK) for Unreal Engine
+  url: https://docs.liv.tv/unreal/installation
+  download: https://dashboard.liv.tv/dev/login
+  supports: Unreal Engine 4.26-5.4+ (5.4+ recommended)
+  official: true

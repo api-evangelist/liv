@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.liv.tv/api-reference/unity/classes/core/LckCore.md
+notes: >-
+  LIV Camera Kit is a client SDK, not a REST API; there is no OpenAPI securityScheme
+  to derive. Authentication is handled inside the SDK via a Tracking ID plus a LIV
+  Hub device-login flow. The app authenticates the end user (viewer) for streaming
+  and subscription features; the developer identifies their integration with a
+  Tracking ID (UUID v4) issued from the LIV Developer Dashboard.
+summary:
+  types: [tracking-id, device-login]
+  developer_credential: Tracking ID (UUID v4) issued in the LIV Developer Dashboard
+  user_auth: LIV Hub login-code (device authorization style) polling flow
+schemes:
+- name: tracking-id
+  kind: developer-identifier
+  description: >-
+    UUID v4 Tracking ID configured at SDK init (LckCore.Initialize / Unreal project
+    settings). Missing/invalid IDs surface as CoreError.MissingTrackingId (Unity) or
+    error code 1 InvalidTrackingId (Unreal).
+  issued_by: https://dashboard.liv.tv
+- name: liv-hub-login
+  kind: user-authentication
+  description: >-
+    End-user login for streaming/subscription. LckCore.StartLoginAttemptAsync()
+    returns a login code the user confirms in LIV Hub; the app polls
+    LckCore.CheckLoginCompletedAsync() until the attempt completes, then queries
+    IsUserSubscribed() / HasUserConfiguredStreaming().
+  operations:
+  - StartLoginAttemptAsync
+  - CheckLoginCompletedAsync
+  - IsUserSubscribed
+  - HasUserConfiguredStreaming
+docs: https://docs.liv.tv/api-reference/unity/classes/core/LckCore.md
