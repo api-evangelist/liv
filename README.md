@@ -64,6 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-LIV is a company surfaced as a portfolio company of seedcamp, techstars and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+LIV is an XR video capture and live-streaming platform whose flagship product, the LIV Camera Kit (LCK), is a game-engine SDK for Unity and Unreal Engine. It lets extended-reality apps on Meta Quest and PCVR embed user-spawnable in-game cameras for recording video, capturing screenshots, and live streaming to YouTube, Twitch, and custom RTMP endpoints - with no external capture hardware or software. An official Meta Quest partner, LIV ships first-party Unity and Unreal SDKs, a Developer Dashboard for SDK downloads and Tracking IDs, a LIV Hub device-login flow for streaming and subscriptions, and a desktop LIV App URI/command API for mixed-reality capture. The SDK is free for developers and is used by apps serving millions of monthly active users.
 
-Backed by: seedcamp, techstars — http://liv.tv
+**Areas:** Company · Extended Reality · Virtual Reality · Mixed Reality · Video Capture · Live Streaming · Game Engine SDK · Unity · Unreal Engine · Meta Quest
+
+## LIV on APIs.io
+
+Everything profiled for LIV is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/liv/](https://apis.io/providers/liv/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Liv Authentication](https://apis.io/security/liv/liv-authentication/)
+- [Liv Domain Security](https://apis.io/security/liv/liv-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://liv.tv)
+- [Documentation](https://docs.liv.tv)
+- [Getting started](https://docs.liv.tv/unity/quickstart)
+- [API reference](https://docs.liv.tv/api-reference/unity/introduction)
+- [Sign up](https://dashboard.liv.tv/dev/login)
+- [Support](https://discord.com/invite/liv)
+- [Blog](https://liv.tv/blog)
+- [Terms of service](https://liv.tv/legal/terms-of-service)
+- [Privacy policy](https://liv.tv/legal/privacy-policy)
+- [GitHub](https://github.com/LIV)
+- [Status](https://status.liv.tv)
+
+## API Evangelist rating
+
+**Kin Score 30.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 34.2 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 34.2 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/liv/](https://apis.io/providers/liv/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for LIV: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/liv/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
